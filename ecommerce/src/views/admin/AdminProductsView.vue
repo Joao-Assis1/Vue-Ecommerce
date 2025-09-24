@@ -1,10 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// Criamos uma referência reativa para guardar a lista de produtos
+// Cria uma referência reativa para guardar a lista de produtos
 const products = ref([])
 
-// A mesma função que usamos na loja para buscar os produtos!
+// A mesma função que usa na loja para buscar os produtos!
 async function fetchProducts() {
   try {
     const response = await fetch('http://localhost:3000/products')
@@ -37,7 +37,7 @@ async function deleteProduct(productId) {
     alert('Ocorreu um erro ao excluir o produto.')
   }
 }
-// Chamamos a função para buscar os dados assim que o componente for montado
+// Chama a função para buscar os dados assim que o componente for montado
 onMounted(() => {
   fetchProducts()
 })

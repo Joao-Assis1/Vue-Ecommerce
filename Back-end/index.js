@@ -10,7 +10,7 @@ server.use(cors());
 server.use(express.urlencoded());
 server.use(express.json());
 
-const MONGO_URI = "mongodb://localhost:27017/ecommerce";
+// const MONGO_URI = "mongodb://localhost:27017/ecommerce";
 
 mongoose
   .connect(mongod.getUri())
@@ -50,12 +50,12 @@ server.post("/products", async (req, res) => {
     const { name, price } = req.body;
     if (!name || !price) {
       return res
-        .status(400)
-        .json({ message: "name e preço são campos obrigatórios." });
+        .status(422)
+        .json({ message: "Nome e preço são campos obrigatórios." });
     }
     if (name === "" || price < 0) {
-      return res.status(400).json({
-        message: "name não deve ser vazio e preço deve ser maior que zero.",
+      return res.status(422).json({
+        message: "Nome não deve ser vazio e preço deve ser maior que zero.",
       });
     }
 
@@ -72,10 +72,10 @@ server.put("/products/:id", async (req, res) => {
     const idProduct = req.params.id;
 
     if (req.body.name && req.body.name === "") {
-      return res.status(400).json({ message: "name não pode ser vazio." });
+      return res.status(422).json({ message: "Nome não pode ser vazio." });
     }
     if (req.body.price && req.body.price < 0) {
-      return res.status(400).json({
+      return res.status(422).json({
         message: "Preço deve ser maior que zero.",
       });
     }

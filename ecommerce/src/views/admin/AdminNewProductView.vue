@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router'
 const name = ref('')
 const price = ref(0)
 
-// O useRouter nos dá acesso ao roteador para poder navegar programaticamente.
+// O useRouter  dá acesso ao roteador para poder navegar programaticamente.
 const router = useRouter()
 
 // Esta função será chamada quando o formulário for enviado.
@@ -68,7 +68,7 @@ async function addProduct() {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 
@@ -84,7 +84,7 @@ input {
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
 }

@@ -78,7 +78,7 @@ async function updateProduct() {
 }
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 input {
@@ -92,7 +92,7 @@ input {
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
 }
