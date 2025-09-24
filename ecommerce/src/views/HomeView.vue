@@ -30,7 +30,7 @@ onMounted(() => {
 <template>
   <main class="home-view">
     <h1>Nossa Vitrine de Produtos</h1>
-    <ProductCard v-for="product in products" :key="product.id" :product="product" />
+    <ProductCard v-for="product in products" :key="product._id" :product="product" />
   </main>
 </template>
 

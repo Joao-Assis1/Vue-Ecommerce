@@ -56,8 +56,8 @@ onMounted(() => {
         </tr>
       </thead>
       <tbody>
-        <tr v-for="product in products" :key="product.id">
-          <td>{{ product.id }}</td>
+        <tr v-for="product in products" :key="product._id">
+          <td>{{ product._id }}</td>
           <td>{{ product.name }}</td>
           <td>R$ {{ product.price.toFixed(2) }}</td>
           <td>
